@@ -1,6 +1,15 @@
 # terminal: route -n    (TO KNOW WHAT IS MY GATEWAY)
 # .summary() is a part of scapy which shows more information
 import scapy.all as scapy
+import optparse
+
+
+# Now that the program is working,
+# I want you to use the optparse library I showed you in the previous section
+# to extend this program and make it take the IP range through a command line argument.
+def get_arguments():
+    parser = optparse.OptionParser()
+    parser.add_option("-i", "--interface", dest="interface", help="Interface to change its MAC address")
 
 
 def scan(ip):
